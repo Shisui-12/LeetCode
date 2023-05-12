@@ -3,7 +3,7 @@ public:
     int arraySign(vector<int>& nums) {
         int neg = 0;
         int pos = 0;
-        int zero = 0;
+        // int zero = 0;
          for(auto i : nums)
         {
             if (i < 0)
@@ -16,14 +16,10 @@ public:
             }
             else
             {
-                zero += 1;
+                return 0;
             }
         }
-        if (zero > 0)
-        {
-            return 0;
-        }
-        else if(neg%2 == 1)
+        if(neg%2 == 1)
         {
             return -1;
         }
